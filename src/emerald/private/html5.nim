@@ -295,8 +295,7 @@ tag_list:
                               required, size)
     source:
         tag_omission = true
-        optional_attrs = (`type`, media)
-        required_attrs = src
+        optional_attrs = (`type`, media, src)
     style:
         content_categories = (metadata_content, flow_content)
         permitted_content  = text_content
@@ -343,7 +342,7 @@ tag_list:
         content_categories = (flow_content, phrasing_content, embedded_content,
                               interactive_content)
         permitted_content  = transparent
-        permitted_tags     = track
+        permitted_tags     = (track, source)
         forbidden_tags     = (audio, video)
         optional_attrs     = (autoplay, buffered, controls, crossorigin,
                               height, loop, muted, played, preload, poster,
